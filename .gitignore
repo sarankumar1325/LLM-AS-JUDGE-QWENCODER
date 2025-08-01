@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data
+data/raw/dataset/*
+!data/raw/dataset/.gitkeep
+data/processed/chunks/*
+!data/processed/chunks/.gitkeep
+data/processed/embeddings/*
+!data/processed/embeddings/.gitkeep
+data/chroma_db/
+data/faiss_index/
+
+# Results
+results/logs/*
+!results/logs/.gitkeep
+results/metrics/*
+!results/metrics/.gitkeep
+results/visualizations/*
+!results/visualizations/.gitkeep
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore

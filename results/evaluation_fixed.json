@@ -1,0 +1,332 @@
+{
+  "summary": {
+    "rag_wins": 3,
+    "non_rag_wins": 2,
+    "ties": 0,
+    "rag_win_rate": 0.6,
+    "non_rag_win_rate": 0.4,
+    "tie_rate": 0.0,
+    "average_rag_scores": {
+      "accuracy": 0.4,
+      "relevance": 0.4,
+      "completeness": 0.4,
+      "specificity": 0.4,
+      "coherence": 3.6,
+      "overall": 4.6
+    },
+    "average_non_rag_scores": {
+      "accuracy": 4.0,
+      "relevance": 4.0,
+      "completeness": 4.0,
+      "specificity": 4.0,
+      "coherence": 4.0,
+      "overall": 7.6
+    },
+    "total_queries": 5,
+    "successful_evaluations": 5,
+    "total_evaluation_time": 59.09834837913513,
+    "average_time_per_query": 11.819669675827026
+  },
+  "results": [
+    {
+      "query_id": "q1",
+      "query": "What was Apple's revenue growth in Q4 2019?",
+      "rag_response": "Based on the provided documents, I cannot answer the question about Apple's revenue growth in Q4 2019. Document 1 states that in fiscal year '18, Apple's revenue grew by $36.4 billion and Q4 revenue was $62.9 billion, a 20% increase over last year.\n",
+      "non_rag_response": "Apple's revenue for Q4 2019 (which is Apple's Q1 of fiscal year 2020) was **$91.8 billion**, an increase of **9%** from the same quarter the previous year.\n",
+      "rag_metadata": {
+        "response": "Based on the provided documents, I cannot answer the question about Apple's revenue growth in Q4 2019. Document 1 states that in fiscal year '18, Apple's revenue grew by $36.4 billion and Q4 revenue was $62.9 billion, a 20% increase over last year.\n",
+        "processing_time": 1.491283893585205,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 1064,
+        "response_tokens": 55,
+        "total_tokens": 1120,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 5,
+        "context_sources": [
+          "AAPL_2018-Nov-01_chunk_5",
+          "AAPL_2016-Jul-26_chunk_16",
+          "AAPL_2017-Jan-31_chunk_16",
+          "AAPL_2016-Oct-25_chunk_16",
+          "AAPL_2018-May-01_chunk_16"
+        ],
+        "retrieval_time": 0.47644519805908203,
+        "total_rag_time": 1.967729091644287
+      },
+      "non_rag_metadata": {
+        "response": "Apple's revenue for Q4 2019 (which is Apple's Q1 of fiscal year 2020) was **$91.8 billion**, an increase of **9%** from the same quarter the previous year.\n",
+        "processing_time": 1.2441480159759521,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 44,
+        "response_tokens": 35,
+        "total_tokens": 79,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "accuracy": 1,
+          "relevance": 1,
+          "completeness": 1,
+          "specificity": 1,
+          "coherence": 8,
+          "overall": 1
+        },
+        "response_b_scores": {
+          "accuracy": 10,
+          "relevance": 10,
+          "completeness": 10,
+          "specificity": 10,
+          "coherence": 10,
+          "overall": 10
+        },
+        "winner": "B",
+        "reasoning": "Response B accurately answers the question, providing the correct revenue and growth percentage for Apple in Q4 2019. Response A fails to answer the question, stating it cannot based on the provided documents, and instead provides irrelevant information about previous years. While Response A acknowledges its inability to answer, its overall utility is extremely low due to its failure to provide the requested information. Response B correctly identifies that Apple's Q4 is their fiscal Q1.",
+        "key_differences": "Response B provides the correct answer, while Response A fails to answer the question and provides irrelevant information. Response B correctly identifies the fiscal year alignment.",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 7.019281387329102,
+        "evaluation_tokens": 522
+      },
+      "processing_time": 10.323151350021362
+    },
+    {
+      "query_id": "q2",
+      "query": "Compare the R&D spending between Apple and Microsoft in 2018.",
+      "rag_response": "The provided documents discuss Apple's R&D spending, but there is no mention of Microsoft's R&D spending in 2018 or any comparison between the two companies. Therefore, I cannot answer your question.\n",
+      "non_rag_response": "In 2018, here's how R&D spending compared between Apple and Microsoft:\n\n*   **Apple:** Spent $14.2 billion on R&D.\n*   **Microsoft:** Spent $14.7 billion on R&D.\n\nTherefore, Microsoft's R&D spending was slightly higher than Apple's in 2018.",
+      "rag_metadata": {
+        "response": "The provided documents discuss Apple's R&D spending, but there is no mention of Microsoft's R&D spending in 2018 or any comparison between the two companies. Therefore, I cannot answer your question.\n",
+        "processing_time": 1.0410799980163574,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 1043,
+        "response_tokens": 40,
+        "total_tokens": 1084,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 5,
+        "context_sources": [
+          "AAPL_2016-Oct-25_chunk_32",
+          "AAPL_2016-Jul-26_chunk_68",
+          "AAPL_2019-Jan-29_chunk_12",
+          "AAPL_2017-May-02_chunk_6",
+          "AAPL_2016-Oct-25_chunk_16"
+        ],
+        "retrieval_time": 0.13750529289245605,
+        "total_rag_time": 1.1785852909088135
+      },
+      "non_rag_metadata": {
+        "response": "In 2018, here's how R&D spending compared between Apple and Microsoft:\n\n*   **Apple:** Spent $14.2 billion on R&D.\n*   **Microsoft:** Spent $14.7 billion on R&D.\n\nTherefore, Microsoft's R&D spending was slightly higher than Apple's in 2018.",
+        "processing_time": 1.3514330387115479,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 46,
+        "response_tokens": 46,
+        "total_tokens": 93,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "accuracy": 1,
+          "relevance": 1,
+          "completeness": 1,
+          "specificity": 1,
+          "coherence": 10,
+          "overall": 1
+        },
+        "response_b_scores": {
+          "accuracy": 10,
+          "relevance": 10,
+          "completeness": 10,
+          "specificity": 10,
+          "coherence": 10,
+          "overall": 10
+        },
+        "winner": "B",
+        "reasoning": "Response B provides the correct answer, while Response A fails to answer the question due to a lack of information in its context sources. Even though Response A is RAG-enabled, the absence of relevant information renders it useless in this scenario. Response B demonstrates superior performance by accurately answering the query.",
+        "key_differences": "Response A states it cannot answer the question due to missing information about Microsoft's R&D spending, while Response B provides the R&D spending for both Apple and Microsoft in 2018, answering the query accurately.",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 2.854071855545044,
+        "evaluation_tokens": 500
+      },
+      "processing_time": 5.4454615116119385
+    },
+    {
+      "query_id": "q3",
+      "query": "What were the main challenges faced by semiconductor companies in 2017?",
+      "rag_response": "The context does not contain information about the challenges faced by semiconductor companies in 2017.\n",
+      "non_rag_response": "",
+      "rag_metadata": {
+        "response": "The context does not contain information about the challenges faced by semiconductor companies in 2017.\n",
+        "processing_time": 2.0904791355133057,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 981,
+        "response_tokens": 19,
+        "total_tokens": 1001,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 5,
+        "context_sources": [
+          "INTC_2019-Oct-24_chunk_1",
+          "INTC_2019-Oct-24_chunk_7",
+          "INTC_2019-Jul-25_chunk_1",
+          "INTC_2018-Jan-25_chunk_81",
+          "INTC_2017-Apr-27_chunk_1"
+        ],
+        "retrieval_time": 0.5472407341003418,
+        "total_rag_time": 2.6377198696136475
+      },
+      "non_rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 21\n}\n]",
+        "processing_time": 4.066230535507202,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "overall": 7
+        },
+        "response_b_scores": {
+          "overall": 6
+        },
+        "winner": "A",
+        "reasoning": "Could not parse detailed evaluation",
+        "error": "JSON parsing failed",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 4.97557520866394,
+        "evaluation_tokens": 0
+      },
+      "processing_time": 11.744030952453613
+    },
+    {
+      "query_id": "q4",
+      "query": "How did Amazon's cloud services perform in Q3 2020?",
+      "rag_response": "",
+      "non_rag_response": "",
+      "rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 11\n}\n]",
+        "processing_time": 4.62506628036499,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": true,
+        "context_chunks": 5,
+        "context_sources": [
+          "AMZN_2017-Jul-27_chunk_22",
+          "AMZN_2018-Feb-01_chunk_23",
+          "AMZN_2018-Feb-01_chunk_11",
+          "AMZN_2016-Jan-28_chunk_19",
+          "AMZN_2016-Apr-28_chunk_42"
+        ],
+        "retrieval_time": 0.3586118221282959,
+        "total_rag_time": 4.983678102493286
+      },
+      "non_rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 6\n}\n]",
+        "processing_time": 4.976341724395752,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "overall": 7
+        },
+        "response_b_scores": {
+          "overall": 6
+        },
+        "winner": "A",
+        "reasoning": "Could not parse detailed evaluation",
+        "error": "JSON parsing failed",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 4.989024877548218,
+        "evaluation_tokens": 0
+      },
+      "processing_time": 15.047873735427856
+    },
+    {
+      "query_id": "q5",
+      "query": "What is the outlook for artificial intelligence in the tech industry?",
+      "rag_response": "",
+      "non_rag_response": "The outlook for artificial intelligence (AI) in the tech industry is overwhelmingly positive and transformative, with expectations for continued rapid growth and integration across virtually all sectors. Here's a breakdown of key trends and predictions:\n\n**Key Trends Driving Growth:**\n\n*   **Increased Investment:** Venture capital, private equity, and corporate investment in AI companies and research are at an all-time high and expected to continue growing. This fuels innovation and development.\n*   **Advancements in AI Models:** Continued breakthroughs in deep learning, natural language processing (NLP), computer vision, and other AI subfields are leading to more powerful and versatile AI models. Transformer models, generative AI, and reinforcement learning are particularly impactful.\n*   **Cloud Computing Infrastructure:** The availability of scalable and affordable cloud computing resources is essential for training and deploying AI models. Cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) are heavily invested in AI infrastructure.\n*   **Data Availability:** The explosion of data from various sources (sensors, social media, IoT devices, etc.) provides the fuel for training AI models.\n*   **Democratization of AI:** Tools and platforms are making AI more accessible to developers and businesses without specialized AI expertise. This includes AutoML platforms, pre-trained models, and low-code/no-code AI development environments.\n*   **Edge AI:** Processing AI tasks on edge devices (e.g., smartphones, autonomous vehicles, industrial equipment) is gaining traction, reducing latency, improving privacy, and enabling real-time decision-making.\n*   **Focus on Responsible AI:** There's growing awareness and emphasis on ethical considerations, fairness, transparency, and accountability in AI development and deployment. This includes addressing bias, ensuring data privacy, and mitigating potential risks.\n\n**Impact Across Industries:**\n\n*   **Software Development:** AI is being used to automate code generation, testing, and debugging, improving developer productivity and software quality.\n*   **Healthcare:** AI is revolutionizing diagnostics, drug discovery, personalized medicine, and patient care.\n*   **Finance:** AI is used for fraud detection, risk management, algorithmic trading, and customer service.\n*   **Manufacturing:** AI is optimizing production processes, improving quality control, and enabling predictive maintenance.\n*   **Retail:** AI is personalizing customer experiences, optimizing supply chains, and improving inventory management.\n*   **Transportation:** AI is driving the development of autonomous vehicles, optimizing traffic flow, and improving logistics.\n*   **Cybersecurity:** AI is enhancing threat detection, incident response, and vulnerability management.\n*   **Marketing and Advertising:** AI is personalizing marketing campaigns, optimizing ad spend, and improving customer engagement.\n\n**Challenges and Considerations:**\n\n*   **Talent Gap:** There's a shortage of skilled AI professionals, including data scientists, machine learning engineers, and AI researchers.\n*   **Data Privacy and Security:** Protecting sensitive data used to train and deploy AI models is crucial.\n*   **Ethical Concerns:** Addressing bias, fairness, and transparency in AI algorithms is essential to prevent unintended consequences.\n*   **Regulatory Landscape:** Governments are developing regulations to govern the use of AI, which could impact the development and deployment of AI technologies.\n*   **Integration Complexity:** Integrating AI into existing systems and workflows can be challenging.\n*   **Explainability and Interpretability:** Understanding how AI models make decisions is important for building trust and ensuring accountability.\n\n**Predictions:**\n\n*   **Continued Growth:** The AI market is expected to continue growing at a rapid pace, with significant investments in research, development, and deployment.\n*   **AI-Powered Automation:** AI will automate more tasks across various industries, leading to increased efficiency and productivity.\n*   **Personalized Experiences:** AI will enable more personalized experiences for customers in various domains, such as healthcare, education, and entertainment.\n*   **AI-Driven Innovation:** AI will drive innovation in various fields, leading to new products, services, and business models.\n*   **Focus on Responsible AI:** There will be a greater emphasis on ethical considerations, fairness, transparency, and accountability in AI development and deployment.\n\nIn conclusion, the future of AI in the tech industry is bright. While challenges exist, the potential benefits of AI are enormous, and the industry is poised for continued growth and innovation. Businesses that embrace AI and address the associated challenges will be well-positioned to succeed in the years to come.\n",
+      "rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 56\n}\n]",
+        "processing_time": 4.466766357421875,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": true,
+        "context_chunks": 5,
+        "context_sources": [
+          "GOOGL_2020-Apr-28_chunk_63",
+          "GOOGL_2020-Jul-30_chunk_69",
+          "GOOGL_2016-Feb-01_chunk_48",
+          "GOOGL_2016-Apr-21_chunk_97",
+          "GOOGL_2016-Oct-27_chunk_89"
+        ],
+        "retrieval_time": 0.5492775440216064,
+        "total_rag_time": 5.0160439014434814
+      },
+      "non_rag_metadata": {
+        "response": "The outlook for artificial intelligence (AI) in the tech industry is overwhelmingly positive and transformative, with expectations for continued rapid growth and integration across virtually all sectors. Here's a breakdown of key trends and predictions:\n\n**Key Trends Driving Growth:**\n\n*   **Increased Investment:** Venture capital, private equity, and corporate investment in AI companies and research are at an all-time high and expected to continue growing. This fuels innovation and development.\n*   **Advancements in AI Models:** Continued breakthroughs in deep learning, natural language processing (NLP), computer vision, and other AI subfields are leading to more powerful and versatile AI models. Transformer models, generative AI, and reinforcement learning are particularly impactful.\n*   **Cloud Computing Infrastructure:** The availability of scalable and affordable cloud computing resources is essential for training and deploying AI models. Cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) are heavily invested in AI infrastructure.\n*   **Data Availability:** The explosion of data from various sources (sensors, social media, IoT devices, etc.) provides the fuel for training AI models.\n*   **Democratization of AI:** Tools and platforms are making AI more accessible to developers and businesses without specialized AI expertise. This includes AutoML platforms, pre-trained models, and low-code/no-code AI development environments.\n*   **Edge AI:** Processing AI tasks on edge devices (e.g., smartphones, autonomous vehicles, industrial equipment) is gaining traction, reducing latency, improving privacy, and enabling real-time decision-making.\n*   **Focus on Responsible AI:** There's growing awareness and emphasis on ethical considerations, fairness, transparency, and accountability in AI development and deployment. This includes addressing bias, ensuring data privacy, and mitigating potential risks.\n\n**Impact Across Industries:**\n\n*   **Software Development:** AI is being used to automate code generation, testing, and debugging, improving developer productivity and software quality.\n*   **Healthcare:** AI is revolutionizing diagnostics, drug discovery, personalized medicine, and patient care.\n*   **Finance:** AI is used for fraud detection, risk management, algorithmic trading, and customer service.\n*   **Manufacturing:** AI is optimizing production processes, improving quality control, and enabling predictive maintenance.\n*   **Retail:** AI is personalizing customer experiences, optimizing supply chains, and improving inventory management.\n*   **Transportation:** AI is driving the development of autonomous vehicles, optimizing traffic flow, and improving logistics.\n*   **Cybersecurity:** AI is enhancing threat detection, incident response, and vulnerability management.\n*   **Marketing and Advertising:** AI is personalizing marketing campaigns, optimizing ad spend, and improving customer engagement.\n\n**Challenges and Considerations:**\n\n*   **Talent Gap:** There's a shortage of skilled AI professionals, including data scientists, machine learning engineers, and AI researchers.\n*   **Data Privacy and Security:** Protecting sensitive data used to train and deploy AI models is crucial.\n*   **Ethical Concerns:** Addressing bias, fairness, and transparency in AI algorithms is essential to prevent unintended consequences.\n*   **Regulatory Landscape:** Governments are developing regulations to govern the use of AI, which could impact the development and deployment of AI technologies.\n*   **Integration Complexity:** Integrating AI into existing systems and workflows can be challenging.\n*   **Explainability and Interpretability:** Understanding how AI models make decisions is important for building trust and ensuring accountability.\n\n**Predictions:**\n\n*   **Continued Growth:** The AI market is expected to continue growing at a rapid pace, with significant investments in research, development, and deployment.\n*   **AI-Powered Automation:** AI will automate more tasks across various industries, leading to increased efficiency and productivity.\n*   **Personalized Experiences:** AI will enable more personalized experiences for customers in various domains, such as healthcare, education, and entertainment.\n*   **AI-Driven Innovation:** AI will drive innovation in various fields, leading to new products, services, and business models.\n*   **Focus on Responsible AI:** There will be a greater emphasis on ethical considerations, fairness, transparency, and accountability in AI development and deployment.\n\nIn conclusion, the future of AI in the tech industry is bright. While challenges exist, the potential benefits of AI are enormous, and the industry is poised for continued growth and innovation. Businesses that embrace AI and address the associated challenges will be well-positioned to succeed in the years to come.\n",
+        "processing_time": 7.225582122802734,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 48,
+        "response_tokens": 842,
+        "total_tokens": 890,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "overall": 7
+        },
+        "response_b_scores": {
+          "overall": 6
+        },
+        "winner": "A",
+        "reasoning": "Could not parse detailed evaluation",
+        "error": "JSON parsing failed",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 4.215610980987549,
+        "evaluation_tokens": 0
+      },
+      "processing_time": 16.527174472808838
+    }
+  ],
+  "evaluation_timestamp": 1753850652.5775423,
+  "evaluation_config": {
+    "gemini_model": "gemini-2.0-flash-exp",
+    "embedding_model": "HuggingFaceEmbedder",
+    "vector_store": "ChromaVectorStore",
+    "max_context_chunks": 5,
+    "max_context_tokens": 2000
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "expected_topics": ["supervised learning", "unsupervised learning", "labeled data", "clustering", "classification"]
+  },
+  {
+    "id": "q2",
+    "question": "How does a transformer architecture work in deep learning?",
+    "category": "deep_learning",
+    "difficulty": "intermediate",
+    "expected_topics": ["transformer", "attention mechanism", "encoder-decoder", "self-attention", "neural networks"]
+  },
+  {
+    "id": "q3",
+    "question": "Explain the concept of overfitting and how to prevent it.",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "expected_topics": ["overfitting", "generalization", "regularization", "cross-validation", "model complexity"]
+  },
+  {
+    "id": "q4",
+    "question": "What are the key components of a Retrieval-Augmented Generation (RAG) system?",
+    "category": "nlp",
+    "difficulty": "advanced",
+    "expected_topics": ["RAG", "retrieval", "generation", "vector database", "embeddings", "LLM"]
+  },
+  {
+    "id": "q5",
+    "question": "How do you evaluate the performance of a recommendation system?",
+    "category": "recommendation_systems",
+    "difficulty": "intermediate",
+    "expected_topics": ["precision", "recall", "NDCG", "MAP", "recommendation metrics", "A/B testing"]
+  }
+]

@@ -1,0 +1,316 @@
+{
+  "summary": {
+    "rag_wins": 2,
+    "non_rag_wins": 3,
+    "ties": 0,
+    "rag_win_rate": 0.4,
+    "non_rag_win_rate": 0.6,
+    "tie_rate": 0.0,
+    "average_rag_scores": {
+      "accuracy": 0.6,
+      "relevance": 0.6,
+      "completeness": 0.6,
+      "specificity": 0.6,
+      "coherence": 4.2,
+      "overall": 3.4
+    },
+    "average_non_rag_scores": {
+      "accuracy": 5.8,
+      "relevance": 6.0,
+      "completeness": 5.8,
+      "specificity": 5.6,
+      "coherence": 5.8,
+      "overall": 8.2
+    },
+    "total_queries": 5,
+    "successful_evaluations": 5,
+    "total_evaluation_time": 46.391953468322754,
+    "average_time_per_query": 9.278390693664551
+  },
+  "results": [
+    {
+      "query_id": "q1",
+      "query": "What was Apple's revenue growth in Q4 2019?",
+      "rag_response": "I am sorry, but the provided context does not contain information about Apple's revenue growth in Q4 2019. Therefore, I cannot answer your question.\n",
+      "non_rag_response": "Apple's revenue for Q4 2019 (which is Apple's Q1 of fiscal year 2020) was **$91.8 billion**, an increase of **9%** from the same quarter the previous year.\n",
+      "rag_metadata": {
+        "response": "I am sorry, but the provided context does not contain information about Apple's revenue growth in Q4 2019. Therefore, I cannot answer your question.\n",
+        "processing_time": 0.9915947914123535,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 106,
+        "response_tokens": 31,
+        "total_tokens": 137,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0.02519965171813965,
+        "total_rag_time": 1.0167944431304932
+      },
+      "non_rag_metadata": {
+        "response": "Apple's revenue for Q4 2019 (which is Apple's Q1 of fiscal year 2020) was **$91.8 billion**, an increase of **9%** from the same quarter the previous year.\n",
+        "processing_time": 2.1233320236206055,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 44,
+        "response_tokens": 35,
+        "total_tokens": 79,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "accuracy": 1,
+          "relevance": 1,
+          "completeness": 1,
+          "specificity": 1,
+          "coherence": 10,
+          "overall": 1
+        },
+        "response_b_scores": {
+          "accuracy": 10,
+          "relevance": 10,
+          "completeness": 10,
+          "specificity": 10,
+          "coherence": 10,
+          "overall": 10
+        },
+        "winner": "B",
+        "reasoning": "Response B accurately answers the question, providing both the revenue and the growth percentage. Response A fails to answer the question, stating that the context doesn't contain the information, even though it should have been able to retrieve it. Therefore, Response B is significantly better.",
+        "key_differences": "Response A fails to answer the question, while Response B provides a complete and accurate answer.",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 2.8849072456359863,
+        "evaluation_tokens": 440
+      },
+      "processing_time": 6.201027870178223
+    },
+    {
+      "query_id": "q2",
+      "query": "Compare the R&D spending between Apple and Microsoft in 2018.",
+      "rag_response": "I am sorry, but I do not have enough information to compare the R&D spending between Apple and Microsoft in 2018. The context provided does not contain any information about either company's R&D spending.\n",
+      "non_rag_response": "In 2018, here's how R&D spending compared between Apple and Microsoft:\n\n*   **Apple:** Spent $14.2 billion on R&D.\n*   **Microsoft:** Spent $14.7 billion on R&D.\n\nTherefore, Microsoft's R&D spending was slightly higher than Apple's in 2018.",
+      "rag_metadata": {
+        "response": "I am sorry, but I do not have enough information to compare the R&D spending between Apple and Microsoft in 2018. The context provided does not contain any information about either company's R&D spending.\n",
+        "processing_time": 1.174699068069458,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 109,
+        "response_tokens": 44,
+        "total_tokens": 153,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0.00467681884765625,
+        "total_rag_time": 1.1793758869171143
+      },
+      "non_rag_metadata": {
+        "response": "In 2018, here's how R&D spending compared between Apple and Microsoft:\n\n*   **Apple:** Spent $14.2 billion on R&D.\n*   **Microsoft:** Spent $14.7 billion on R&D.\n\nTherefore, Microsoft's R&D spending was slightly higher than Apple's in 2018.",
+        "processing_time": 1.8851277828216553,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 46,
+        "response_tokens": 46,
+        "total_tokens": 93,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "accuracy": 1,
+          "relevance": 1,
+          "completeness": 1,
+          "specificity": 1,
+          "coherence": 10,
+          "overall": 1
+        },
+        "response_b_scores": {
+          "accuracy": 10,
+          "relevance": 10,
+          "completeness": 10,
+          "specificity": 10,
+          "coherence": 10,
+          "overall": 10
+        },
+        "winner": "B",
+        "reasoning": "Response B provides the requested information accurately and completely. Response A fails to provide any useful information, stating it lacks the necessary context, despite the query being a straightforward request for publicly available financial data. While Response A's coherence is high (it clearly states its limitations), its overall utility is extremely low. Response B is superior because it answers the question correctly and completely.",
+        "key_differences": "Response A states it cannot answer the question due to lack of information, while Response B provides the requested financial data accurately.",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 3.030143976211548,
+        "evaluation_tokens": 500
+      },
+      "processing_time": 6.118713855743408
+    },
+    {
+      "query_id": "q3",
+      "query": "What were the main challenges faced by semiconductor companies in 2017?",
+      "rag_response": "I am sorry, but the context provided does not contain information about the challenges faced by semiconductor companies in 2017. Therefore, I cannot answer your question.\n",
+      "non_rag_response": "In 2017, semiconductor companies faced a complex mix of challenges, primarily centered around:\n\n*   **Memory Pricing and Supply:** A significant challenge was the fluctuating and often increasing prices of memory chips, particularly DRAM and NAND flash memory. This was driven by strong demand from smartphones, data centers, and other applications, coupled with limited supply growth due to manufacturing complexities and capacity constraints. This impacted the cost of goods for many electronics manufacturers and put pressure on semiconductor companies to manage their memory supply chains effectively.\n\n*   **Moore's Law Slowdown and Rising Development Costs:** The traditional pace of Moore's Law (doubling transistors on a chip every two years) was slowing down, making it more difficult and expensive to achieve performance gains through traditional scaling. This led to increased R&D costs for developing new process technologies (like 7nm and beyond) and exploring alternative architectures.\n\n*   **Geopolitical Uncertainty and Trade Tensions:** The rise of trade tensions between major economies, particularly the US and China, created uncertainty for semiconductor companies with global supply chains and markets. Concerns about tariffs, export controls, and technology transfer restrictions added complexity to business planning.\n\n*   **Cybersecurity Threats:** The increasing reliance on connected devices and the Internet of Things (IoT) raised concerns about cybersecurity vulnerabilities in semiconductors. Companies faced the challenge of designing chips with robust security features to protect against hacking and data breaches.\n\n*   **Talent Shortage:** The semiconductor industry faced a shortage of skilled engineers and technicians, particularly in areas like advanced process technology, design, and manufacturing. This made it difficult for companies to attract and retain the talent needed to innovate and compete.\n\n*   **Competition and Consolidation:** The semiconductor industry remained highly competitive, with companies vying for market share in various segments. This led to ongoing consolidation through mergers and acquisitions, as companies sought to gain scale, expand their product portfolios, and access new technologies.\n\n*   **Automotive Market Complexity:** The automotive sector was becoming an increasingly important market for semiconductors, driven by the growth of electric vehicles (EVs) and advanced driver-assistance systems (ADAS). However, the automotive market had its own unique requirements, such as high reliability, long product lifecycles, and stringent safety standards, which posed challenges for semiconductor companies accustomed to the faster pace of the consumer electronics market.",
+      "rag_metadata": {
+        "response": "I am sorry, but the context provided does not contain information about the challenges faced by semiconductor companies in 2017. Therefore, I cannot answer your question.\n",
+        "processing_time": 1.2894847393035889,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 110,
+        "response_tokens": 33,
+        "total_tokens": 144,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0.004717588424682617,
+        "total_rag_time": 1.2942023277282715
+      },
+      "non_rag_metadata": {
+        "response": "In 2017, semiconductor companies faced a complex mix of challenges, primarily centered around:\n\n*   **Memory Pricing and Supply:** A significant challenge was the fluctuating and often increasing prices of memory chips, particularly DRAM and NAND flash memory. This was driven by strong demand from smartphones, data centers, and other applications, coupled with limited supply growth due to manufacturing complexities and capacity constraints. This impacted the cost of goods for many electronics manufacturers and put pressure on semiconductor companies to manage their memory supply chains effectively.\n\n*   **Moore's Law Slowdown and Rising Development Costs:** The traditional pace of Moore's Law (doubling transistors on a chip every two years) was slowing down, making it more difficult and expensive to achieve performance gains through traditional scaling. This led to increased R&D costs for developing new process technologies (like 7nm and beyond) and exploring alternative architectures.\n\n*   **Geopolitical Uncertainty and Trade Tensions:** The rise of trade tensions between major economies, particularly the US and China, created uncertainty for semiconductor companies with global supply chains and markets. Concerns about tariffs, export controls, and technology transfer restrictions added complexity to business planning.\n\n*   **Cybersecurity Threats:** The increasing reliance on connected devices and the Internet of Things (IoT) raised concerns about cybersecurity vulnerabilities in semiconductors. Companies faced the challenge of designing chips with robust security features to protect against hacking and data breaches.\n\n*   **Talent Shortage:** The semiconductor industry faced a shortage of skilled engineers and technicians, particularly in areas like advanced process technology, design, and manufacturing. This made it difficult for companies to attract and retain the talent needed to innovate and compete.\n\n*   **Competition and Consolidation:** The semiconductor industry remained highly competitive, with companies vying for market share in various segments. This led to ongoing consolidation through mergers and acquisitions, as companies sought to gain scale, expand their product portfolios, and access new technologies.\n\n*   **Automotive Market Complexity:** The automotive sector was becoming an increasingly important market for semiconductors, driven by the growth of electric vehicles (EVs) and advanced driver-assistance systems (ADAS). However, the automotive market had its own unique requirements, such as high reliability, long product lifecycles, and stringent safety standards, which posed challenges for semiconductor companies accustomed to the faster pace of the consumer electronics market.",
+        "processing_time": 4.564553737640381,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 48,
+        "response_tokens": 484,
+        "total_tokens": 533,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "accuracy": 1,
+          "relevance": 1,
+          "completeness": 1,
+          "specificity": 1,
+          "coherence": 1,
+          "overall": 1
+        },
+        "response_b_scores": {
+          "accuracy": 9,
+          "relevance": 10,
+          "completeness": 9,
+          "specificity": 8,
+          "coherence": 9,
+          "overall": 9
+        },
+        "winner": "B",
+        "reasoning": "Response B provides a detailed and accurate overview of the challenges faced by semiconductor companies in 2017. It covers key issues such as memory pricing, Moore's Law slowdown, geopolitical uncertainty, cybersecurity, talent shortage, competition, and automotive market complexity. Response A, despite being RAG-enabled, fails to provide any relevant information, stating that the context does not contain the answer. This indicates a failure in the RAG system's ability to retrieve and utilize relevant information. Therefore, Response B is significantly better.",
+        "key_differences": "Response A provides no information, while Response B provides a comprehensive and accurate answer to the query.",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 3.340634822845459,
+        "evaluation_tokens": 942
+      },
+      "processing_time": 9.223142385482788
+    },
+    {
+      "query_id": "q4",
+      "query": "How did Amazon's cloud services perform in Q3 2020?",
+      "rag_response": "I'm sorry, but the provided context does not contain information about Amazon's cloud services performance in Q3 2020. Therefore, I cannot answer your question.\n",
+      "non_rag_response": "",
+      "rag_metadata": {
+        "response": "I'm sorry, but the provided context does not contain information about Amazon's cloud services performance in Q3 2020. Therefore, I cannot answer your question.\n",
+        "processing_time": 1.0293314456939697,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 107,
+        "response_tokens": 31,
+        "total_tokens": 139,
+        "attempt": 1,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0.0057027339935302734,
+        "total_rag_time": 1.0350341796875
+      },
+      "non_rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 50\n}\n]",
+        "processing_time": 4.1404454708099365,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "overall": 7
+        },
+        "response_b_scores": {
+          "overall": 6
+        },
+        "winner": "A",
+        "reasoning": "Could not parse detailed evaluation",
+        "error": "JSON parsing failed",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 4.990772247314453,
+        "evaluation_tokens": 0
+      },
+      "processing_time": 10.198607921600342
+    },
+    {
+      "query_id": "q5",
+      "query": "What is the outlook for artificial intelligence in the tech industry?",
+      "rag_response": "I am sorry, but I cannot answer your question about the outlook for artificial intelligence in the tech industry because the provided context does not contain any relevant information.\n",
+      "non_rag_response": "",
+      "rag_metadata": {
+        "response": "I am sorry, but I cannot answer your question about the outlook for artificial intelligence in the tech industry because the provided context does not contain any relevant information.\n",
+        "processing_time": 5.4601428508758545,
+        "model": "gemini-2.0-flash-exp",
+        "prompt_tokens": 110,
+        "response_tokens": 37,
+        "total_tokens": 148,
+        "attempt": 3,
+        "success": true,
+        "rag_enabled": true,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0.005880594253540039,
+        "total_rag_time": 5.4660234451293945
+      },
+      "non_rag_metadata": {
+        "response": "",
+        "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 36\n}\n]",
+        "processing_time": 4.197679758071899,
+        "model": "gemini-2.0-flash-exp",
+        "attempt": 3,
+        "success": false,
+        "rag_enabled": false,
+        "context_chunks": 0,
+        "context_sources": [],
+        "retrieval_time": 0
+      },
+      "gemini_evaluation": {
+        "response_a_scores": {
+          "overall": 7
+        },
+        "response_b_scores": {
+          "overall": 6
+        },
+        "winner": "A",
+        "reasoning": "Could not parse detailed evaluation",
+        "error": "JSON parsing failed",
+        "evaluation_model": "gemini-2.0-flash-exp",
+        "evaluation_time": 4.960316181182861,
+        "evaluation_tokens": 0
+      },
+      "processing_time": 14.643050193786621
+    }
+  ],
+  "evaluation_timestamp": 1753805429.121785,
+  "evaluation_config": {
+    "gemini_model": "gemini-2.0-flash-exp",
+    "embedding_model": "HuggingFaceEmbedder",
+    "vector_store": "ChromaVectorStore",
+    "max_context_chunks": 5,
+    "max_context_tokens": 2000
+  }
+}
