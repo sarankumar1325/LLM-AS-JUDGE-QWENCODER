@@ -65,6 +65,4 @@ This project implements a robust evaluation framework that compares RAG and non-
 - `results/`: Evaluation results and visualizations
 - `docker/`: Docker configuration
 
-## License
 
-[Your License]
